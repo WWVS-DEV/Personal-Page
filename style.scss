@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+@import url("https://fonts.googleapis.com/css?family=Radley");
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Milonga&display=swap');
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: #17181a;
+  }
+  
+/* Presentación */
+#presentacion{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+
+    #links{
+        width: 100%;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        line-height: 24px;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-top: 32px;
+
+        a{
+            text-decoration: none;
+            color: #17181a;
+
+            &:hover{
+                cursor: pointer;
+                color:rgb(236, 100, 202);
+            }
+        }
+
+        .dot{
+            padding: 0 32px;
+            font-size: 8px;
+            color: #17181a;
+        }
+    }
+
+    #me{
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        top: 50%;
+        margin-top: -80px;
+        position: absolute;
+
+        .nombre{
+            font-family: 'Radley', sans-serif;
+            font-size: 96px;
+            text-transform: uppercase;
+            letter-spacing: 16px;
+            line-height: 96px;
+        }
+
+        .profesion{
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 32px;
+            margin-top: 32px;
+        }
+    }
+}
+
+/* Contenido */
+#contenido{
+    width: 100%;
+    background: #1a1719;
+    margin-top: 100vh;
+    z-index: 9999;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-bottom: 192px;
+
+    #header{
+        padding-top: 96px;
+        color: #fff;
+        width: 750px;
+        font-family: 'Radley', sans-serif;
+        font-size: 96px;
+        text-transform: uppercase;
+        letter-spacing: 16px;
+        line-height: 120%;
+        text-align: left;
+        z-index: 1000;
+    }
+
+    #datos{
+        width: 750px;
+        z-index: 1000;
+
+        .dato{
+            color: #fff;
+            margin-top: 48px;
+
+            .titulo{
+                font-family: 'Radley', sans-serif;
+                font-size: 32px;
+                line-height: 48px;
+                margin-left: -30px;
+              }
+
+            .desc{
+                font-size: 20px;
+                font-family: 'Lato', sans-serif;
+                line-height: 32px;
+                margin-top: 8px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                color: rgba(255,255,255,0.7);
+
+                a{
+                    color: #fff;
+                    font-weight: bold;
+                    text-decoration: none;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: pink;
+                    }
+                }
+
+                b{
+                    color: rgb(255, 251, 251);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+/* Skills */
+picture{
+
+    justify-content: center;
+
+    img{
+        margin: 20px;
+        width: 80px;
+        margin-left: 15px;
+        margin-right: 15px; 
+    }
+}
+
+
+/* Footer */ 
+#footer{
+    width: 100%;
+    height: -70%;
+    background-color: #17181a;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+
+
+    .text-center{
+        text-align: center;
+        color: white;
+        padding: 50px;
+        margin: 0px;
+
+            a{
+                font-weight: bold;
+                color: white;
+            }
+      }
+        img{
+            width: 40px;
+            margin: 0 7px;
+        }
+    }
+
+/*  Media query */
+@media (max-width: 640px){
+    #presentacion #links{
+        font-size: 14px;
+        margin-top: 24px;
+        letter-spacing: 4px;
+
+        .dot{
+            padding: 0 8px;
+            font-size: 4px;
+        }
+    }
+
+    #presentacion #me{
+        height: 88px;
+        margin-top: -44px;
+
+        .nombre{
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 8px;
+        }
+
+        .profesion{
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 4px;
+            margin-top: 8px;
+        }
+    }
+
+    #contenido{
+        width: 92%;
+        padding: 0 4%; 
+
+        #header{
+            width: 100%;
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 8px;
+            padding-top: 48px;
+        }
+
+        #datos{
+            width: 100%;
+
+            .dato .titulo{
+                margin-left: 0px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .dato .desc{
+                margin-left: 0px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+
+    #footer{
+        width: 92%;
+        height: 100hv;
+        padding: 0 4%; 
+        position: absolute;
+        margin-top: -10px;
+    }
+}
